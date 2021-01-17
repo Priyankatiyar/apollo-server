@@ -1,2 +1,4 @@
 /* eslint-disable import/extensions */
-export { default as config } from './configuration.js';
+import config from './configuration.js';
+
+export default config;

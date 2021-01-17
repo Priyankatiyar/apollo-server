@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 import Server from './server.js';
-import config from './config/configuration.js';
+import config from './config/index.js';
 import schema from './modules/index.js';
 
 const server = new Server(config);
