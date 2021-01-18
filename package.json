@@ -1,0 +1,41 @@
+{
+  "name": "apollo_server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "GraphQL is a query language for your API, and a server-side runtime for executing queries by using a type system you define for your data. GraphQL isn't tied to any specific database or storage engine and is instead backed by your existing code and data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "nodemon": "nodemon ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Priyankatiyar/apollo-server.git"
+  },
+  "author": "priyanka katiyar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Priyankatiyar/apollo-server/issues"
+  },
+  "homepage": "https://github.com/Priyankatiyar/apollo-server#readme",
+  "dependencies": {
+    "@babel/cli": "^7.12.10",
+    "apollo-server-express": "^2.19.2",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "express": "^4.17.1",
+    "graphql": "^15.4.0",
+    "merge-graphql-schemas": "^1.7.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "nodemon": "^2.0.7"
+  }
+}
