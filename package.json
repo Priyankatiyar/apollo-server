@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Priyankatiyar/apollo-server#readme",
   "dependencies": {
     "@babel/cli": "^7.12.10",
+    "apollo-datasource-rest": "^0.9.7",
     "apollo-server": "^2.19.2",
     "apollo-server-express": "^2.19.2",
     "dotenv": "^8.2.0",
