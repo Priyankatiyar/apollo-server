@@ -3,6 +3,7 @@ import Express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import { createServer } from 'http';
 import { UserAPI } from './datasource/index.js';
+import { TraineeAPI } from './datasource/index.js';
 
 class Server {
   constructor(config) {
@@ -30,8 +31,14 @@ class Server {
         ...schema,
         dataSources: () => ({
           userAPI: new UserAPI(),
-          // traineeAPI: new TraineeAPI(),
+          traineeAPI: new TraineeAPI(),
         }),
+        context: ({ req }) => {
+          if (req) {
+            return { token: req.headers.authorization };
+          }
+          return {};
+        },
         healthCheck: () => new Promise((resolve) => {
           resolve('I am Fine.');
         }),

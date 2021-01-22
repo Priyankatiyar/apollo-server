@@ -1,7 +1,15 @@
 type User {
+    id: ID
+    name: String
+    email: String
+}
+
+type UserData {
     id: ID!
     name: String!
     email: String!
+    role: String
+    originalId: String!
 }
 
 input loginData {
