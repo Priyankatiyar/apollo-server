@@ -22,3 +22,19 @@ type onLogin {
   Message: String!
   Data: String!
 }
+
+type GetTrainees {
+  message: String
+  totalCount: Int
+  count: Int
+  data: [[Details]]
+}
+
+type Details {
+  name: String
+  _id: ID
+  role: String
+  email: String
+  password: String
+  createdAt: String
+}
