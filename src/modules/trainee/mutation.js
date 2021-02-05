@@ -38,7 +38,7 @@ export default {
     const deletedId = await traineeAPI.deleteRecord(originalId);
     console.log('delete--', deletedId);
     pubsub.publish(constant.subscriptions.TRAINEE_DELETED, { traineeDeleted: deletedId });
-    return deletedId.message;
+    return deletedId;
   },
 
 };
