@@ -17,6 +17,7 @@ export class UserAPI extends RESTDataSource {
   }
 
   loginUser(payload) {
+    console.log('pylod is : ', payload);
     return this.post('/login', payload);
   }
 }

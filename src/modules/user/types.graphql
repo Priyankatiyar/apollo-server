@@ -1,7 +1,8 @@
 type User {
-    id: ID
     name: String
     email: String
+    originalId: ID
+    createdAt: String
 }
 
 type UserData {
@@ -10,6 +11,7 @@ type UserData {
     email: String
     role: String
     originalId: String
+    createdAt: String
 }
 
 input loginData {
@@ -19,15 +21,15 @@ input loginData {
 
 type onLogin {
   status: String!
-  Message: String!
-  Data: String!
+  message: String!
+  data: String!
 }
 
 type GetTrainees {
   message: String
   totalCount: Int
   count: Int
-  data: [[Details]]
+  data: [Details]
 }
 
 type Details {
