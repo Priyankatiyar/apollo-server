@@ -1,0 +1,18 @@
+type Query {
+    getMyProfile: User!
+    getAllTrainees(payload:GetAllInput): GetTrainees
+    getTrainee(id: ID!) :User!
+}
+
+type Mutation {
+    createTrainee(user: CreateUserInput): [User]
+    updateTrainee(payload: UpdateUserInput): [Details]
+    deleteTrainee(payload: DeleteId): DeleteResponse
+    loginUser(payload: loginData): String
+}
+
+type Subscription {
+    traineeAdded: [User!]
+    traineeUpdated: [Details]
+    traineeDeleted: DeleteResponse   
+}

@@ -1,0 +1,49 @@
+type User {
+    name: String
+    email: String
+    originalId: ID
+    createdAt: String
+}
+
+type UserData {
+    id: ID
+    name: String
+    email: String
+    role: String
+    originalId: String
+    createdAt: String
+}
+
+input loginData {
+  email: String!
+  password: String!
+}
+
+type onLogin {
+  status: String!
+  message: String!
+  data: String!
+}
+
+type GetTrainees {
+  message: String
+  totalCount: Int
+  count: Int
+  data: [Details]
+}
+
+type Details {
+  name: String
+  _id: ID
+  originalId: ID
+  role: String
+  email: String
+  password: String
+  createdAt: String
+}
+
+type DeleteResponse {
+  message: String
+  data: ID
+  status: String
+}
